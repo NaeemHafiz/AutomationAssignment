@@ -1,0 +1,11 @@
+{
+    "user": {
+        "firstname": "First Name",
+        "lastname": "Last Name",
+        "email": "naee345m@yahoo.com",
+        "password": "SuperSecretPassword!"
+    },
+    "api": {
+        "apibaseurl": "https://dummy.restapiexample.com/api/v1"
+    }
+}
