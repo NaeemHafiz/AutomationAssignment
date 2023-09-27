@@ -3,10 +3,10 @@ import { SignupPage } from '../pages/signup'
 const testData = JSON.parse(JSON.stringify(require('../test-data/TestData.json')));
 
 
-test.only('User Test', async ({ page }) => {
+test('User Test', async ({ page }) => {
   const Signup = new SignupPage(page)
   await Signup.goToSignupPage()
-  await Signup.signup(testData.user.firstname, testData.user.lastname, testData.user.email, testData.user.password)
+  await Signup.signup(testData.user.firstname, testData.user.lastname, testData.user.email, testData.user.password,testData.user.url)
 });
 
 test("API Test", async ({ request }) => {

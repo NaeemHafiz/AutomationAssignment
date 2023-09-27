@@ -11,6 +11,13 @@ const { defineConfig, devices } = require('@playwright/test');
  * @see https://playwright.dev/docs/test-configuration
  */
 module.exports = defineConfig({
+  // General timeout per test
+  timeout: 100000,
+
+  // For expect calls
+  expect: {
+    timeout: 100000,   // <---------
+  },
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -24,8 +31,10 @@ module.exports = defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
+    // For browser actions
+    actionTimeout: 20000,
     /* Base URL to use in actions like `await page.goto('/')`. */
-     baseURL: 'https://courses.ultimateqa.com/users/',
+    baseURL: 'https://courses.ultimateqa.com/users/',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
