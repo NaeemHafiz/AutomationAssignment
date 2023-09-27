@@ -10,7 +10,7 @@ test.only('User Test', async ({ page }) => {
 });
 
 test("API Test", async ({ request }) => {
-  const response = await request.get(testData.api.apibaseurl + '/semployees')
+  const response = await request.get(testData.api.apibaseurl + '/employees')
   if (response.status() == 429) {
     console.log("Too Many Requests")
     test.fail()

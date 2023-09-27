@@ -14,7 +14,7 @@ exports.SignupPage = class SignupPage {
     async goToSignupPage() {
         await this.page.goto("sign_up")
     }
-    async signup(firstname, lastname, email, password) {
+    async signup(firstname, lastname, email, password, url) {
         await this.first_name_textbox.fill(firstname)
         await this.last_name_textbox.fill(lastname)
         await this.email_textbox.fill(email)
@@ -23,5 +23,13 @@ exports.SignupPage = class SignupPage {
         await this.signup_button.click()
         await this.page.pause()
         await expect(this.page.locator('//li/a[contains(text(),"My Dashboard")]')).toBeVisible()
+        await this.page.locator("//i[@class='fa fa-caret-down']").click()
+        await this.page.locator("//li/a[contains(text(),'Sign Out')]").click()
+        await expect(this.page).toHaveUrl('https://courses.ultimateqa.com/')
+        this.page = await context.newPage();
+        await this.page.goto(url)
+        await this.page.locator("//input[@type='email']").type(email)
+        await this.page.locator("//span[text()='Next']").click()
+        await this.page.pause()
     }
 }
