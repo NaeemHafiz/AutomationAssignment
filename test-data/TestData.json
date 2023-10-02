@@ -2,7 +2,7 @@
     "user": {
         "firstname": "First Name",
         "lastname": "Last Name",
-        "email": "naeemhassanhafiz24@gmail.com",
+        "email": "naeemhassanhafizyr2gr4@gmail.com",
         "password": "SuperSecretPassword!",
         "gmail_url": "https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ifkv=AYZoVhfZkN33IZHcuamK2vrgwiHf90mfQU-F32ciEnt2D508on92OB-dk8R3iAUyUYXxM_BuAAVgvA&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1493323983%3A1695781503925126&theme=glif",
         "signin_url": "https://courses.ultimateqa.com/users/sign_in"

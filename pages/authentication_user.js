@@ -15,6 +15,8 @@ exports.AuthenticationUserPage = class AuthenticationUserPage {
         this.signoutText = this.page.locator("//li/a[contains(text(),'Sign Out')]")
         this.gmailField = this.page.locator("//input[@type='email']")
         this.nextBtn = page.locator("//span[text()='Next']")
+        this.ultimateQAText = page.locator("(//span[text()='Your Ultimate QA course details.'])[2]")
+        this.signInUrl = page.locator("//a[@href='https://courses.ultimateqa.com/users/sign_in']")
     }
 
     async goToSignupPage() {
@@ -33,9 +35,11 @@ exports.AuthenticationUserPage = class AuthenticationUserPage {
         await this.downArrayIcon.click()
         await this.signoutText.click()
         // Go To Email Server i.e, Gmail
-        await this.page.goto(gmail_url)
-        await this.gmailField.type(email)
-        await this.nextBtn.click()
+        // await this.page.goto(gmail_url)
+        // await this.gmailField.type(email)
+        // await this.nextBtn.click()
+        // await this.ultimateQAText.click()
+        // await this.signInUrl.click()
         // Go To Signin Page
         await this.page.goto(signin_url)
         await this.email_textbox.fill(email)
